@@ -2,9 +2,17 @@ package com.java.barbearia.models;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.UUID;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "barbeiro_tb")
 public class BarbeiroModel {
@@ -29,51 +37,4 @@ public class BarbeiroModel {
     @Column(name = "email_barbeiro", unique = true, nullable = false, length = 254)
     private String emailBarbeiro;
 
-    public UUID getIdBarbeiro() {
-        return idBarbeiro;
-    }
-
-    public void setIdBarbeiro(UUID idBarbeiro) {
-        this.idBarbeiro = idBarbeiro;
-    }
-
-    public String getNomeBarbeiro() {
-        return nomeBarbeiro;
-    }
-
-    public void setNomeBarbeiro(String nomeBarbeiro) {
-        this.nomeBarbeiro = nomeBarbeiro;
-    }
-
-    public String getEspecialidadeBarbeiro() {
-        return especialidadeBarbeiro;
-    }
-
-    public void setEspecialidadeBarbeiro(String especialidadeBarbeiro) {
-        this.especialidadeBarbeiro = especialidadeBarbeiro;
-    }
-
-    public Boolean getStatusBarbeiro() {
-        return statusBarbeiro;
-    }
-
-    public void setStatusBarbeiro(Boolean statusBarbeiro) {
-        this.statusBarbeiro = statusBarbeiro;
-    }
-
-    public String getTelefoneBarbeiro() {
-        return telefoneBarbeiro;
-    }
-
-    public void setTelefoneBarbeiro(String telefoneBarbeiro) {
-        this.telefoneBarbeiro = telefoneBarbeiro;
-    }
-
-    public String getEmailBarbeiro() {
-        return emailBarbeiro;
-    }
-
-    public void setEmailBarbeiro(String emailBarbeiro) {
-        this.emailBarbeiro = emailBarbeiro;
-    }
 }

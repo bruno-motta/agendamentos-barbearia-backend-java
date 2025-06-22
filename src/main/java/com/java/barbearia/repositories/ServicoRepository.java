@@ -8,5 +8,5 @@ import java.util.UUID;
 
 public interface ServicoRepository extends JpaRepository<ServicoModel, UUID> {
 
-    Optional<ServicoModel> findByNomeServico(String nomeServico);
+
 }

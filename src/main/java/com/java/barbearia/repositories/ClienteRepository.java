@@ -3,6 +3,7 @@ package com.java.barbearia.repositories;
 import com.java.barbearia.models.ClienteModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.List;
@@ -16,8 +17,10 @@ public interface ClienteRepository extends JpaRepository<ClienteModel, UUID> {
 
     Optional<ClienteModel> findByTelefoneCliente(String telefoneCliente);
 
-
+    //Todo: Vizualizar se relamente é preciso
     List<ClienteModel> findByNomeCliente(String nomeCliente);
 
-
+    
+    @Transactional
+    void deleteByEmailCliente(String emailCliente);
 }

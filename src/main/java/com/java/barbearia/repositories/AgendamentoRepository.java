@@ -13,9 +13,5 @@ import java.util.UUID;
 
 public interface AgendamentoRepository extends JpaRepository<AgendamentoModel, UUID> {
 
-    List<AgendamentoModel> findByClienteFk(ClienteModel clienteFk);
 
-    List<AgendamentoModel> findByBarbeiroFk(BarbeiroModel barbeiroFK);
-
-    List<AgendamentoModel> findByDataHoraAgendamento(LocalDateTime dataHoraAgendamento);
 }

@@ -1,10 +1,19 @@
 package com.java.barbearia.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "cliente_Tb")
 public class ClienteModel {
@@ -27,44 +36,5 @@ public class ClienteModel {
     @Column(name = "data_cadastro",nullable = false)
     private LocalDateTime dataCadastro = LocalDateTime.now();
 
-
-    public UUID getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(UUID idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    public String getNomeCliente() {
-        return nomeCliente;
-    }
-
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
-    }
-
-    public String getTelefoneCliente() {
-        return telefoneCliente;
-    }
-
-    public void setTelefoneCliente(String telefoneCliente) {
-        this.telefoneCliente = telefoneCliente;
-    }
-
-    public String getEmailCliente() {
-        return emailCliente;
-    }
-
-    public void setEmailCliente(String emailCliente) {
-        this.emailCliente = emailCliente;
-    }
-
-    public LocalDateTime getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(LocalDateTime dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
 }
+
