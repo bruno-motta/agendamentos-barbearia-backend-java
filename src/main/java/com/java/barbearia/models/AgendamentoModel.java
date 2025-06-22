@@ -3,10 +3,18 @@ package com.java.barbearia.models;
 
 import com.java.barbearia.models.enuns.Status.Status;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "agendamento_tb")
 public class AgendamentoModel {
@@ -35,62 +43,7 @@ public class AgendamentoModel {
     @Column(name = "status_agendamento", nullable = false)
     private Status statusAgendamento;
 
-    @Column(name = "comentario_agenamento",nullable = true, length = 254)
+    @Column(name = "comentario_agenamento", nullable = true, length = 254)
     private String comentarioAgendamento;
 
-    public UUID getIdAgendamento() {
-        return idAgendamento;
-    }
-
-    public void setIdAgendamento(UUID idAgendamento) {
-        this.idAgendamento = idAgendamento;
-    }
-
-    public ClienteModel getClienteFk() {
-        return clienteFk;
-    }
-
-    public void setClienteFk(ClienteModel clienteFk) {
-        this.clienteFk = clienteFk;
-    }
-
-    public BarbeiroModel getBarbeiroFk() {
-        return barbeiroFk;
-    }
-
-    public void setBarbeiroFk(BarbeiroModel barbeiroFk) {
-        this.barbeiroFk = barbeiroFk;
-    }
-
-    public ServicoModel getServicoFk() {
-        return servicoFk;
-    }
-
-    public void setServicoFk(ServicoModel servicoFk) {
-        this.servicoFk = servicoFk;
-    }
-
-    public LocalDateTime getDataHoraAgendamento() {
-        return dataHoraAgendamento;
-    }
-
-    public void setDataHoraAgendamento(LocalDateTime dataHoraAgendamento) {
-        this.dataHoraAgendamento = dataHoraAgendamento;
-    }
-
-    public Status getStatusAgendamento() {
-        return statusAgendamento;
-    }
-
-    public void setStatusAgendamento(Status statusAgendamento) {
-        this.statusAgendamento = statusAgendamento;
-    }
-
-    public String getComentarioAgendamento() {
-        return comentarioAgendamento;
-    }
-
-    public void setComentarioAgendamento(String comentarioAgendamento) {
-        this.comentarioAgendamento = comentarioAgendamento;
-    }
 }

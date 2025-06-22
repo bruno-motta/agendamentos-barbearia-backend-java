@@ -8,10 +8,6 @@ import java.util.UUID;
 
 public interface BarbeiroRepository extends JpaRepository<BarbeiroModel, UUID> {
 
-    Optional<BarbeiroModel> findByEmailBarbeiro(String emailBarbeiro);
-
-    Optional<BarbeiroModel> findByTelefoneBarbeiro(String telefoneBarbeiro);
-
-    Optional<BarbeiroModel> findByNomeBarbeiro(String nomeBarbeiro);
+    ;
 
 }

@@ -1,10 +1,18 @@
 package com.java.barbearia.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "servico_tb")
 public class ServicoModel {
@@ -21,37 +29,6 @@ public class ServicoModel {
     private Integer duracaoServico;
 
     @Column(name = "preco_servico", nullable = false, precision = 19, scale = 2)
-    private BigDecimal preco_servico;
+    private BigDecimal precoServico;
 
-    public UUID getIdServico() {
-        return idServico;
-    }
-
-    public void setIdServico(UUID idServico) {
-        this.idServico = idServico;
-    }
-
-    public String getNomeServico() {
-        return nomeServico;
-    }
-
-    public void setNomeServico(String nomeServico) {
-        this.nomeServico = nomeServico;
-    }
-
-    public Integer getDuracaoServico() {
-        return duracaoServico;
-    }
-
-    public void setDuracaoServico(Integer duracaoServico) {
-        this.duracaoServico = duracaoServico;
-    }
-
-    public BigDecimal getPreco_servico() {
-        return preco_servico;
-    }
-
-    public void setPreco_servico(BigDecimal preco_servico) {
-        this.preco_servico = preco_servico;
-    }
 }
