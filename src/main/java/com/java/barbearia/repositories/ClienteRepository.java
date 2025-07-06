@@ -17,10 +17,6 @@ public interface ClienteRepository extends JpaRepository<ClienteModel, UUID> {
 
     Optional<ClienteModel> findByTelefoneCliente(String telefoneCliente);
 
-    //Todo: Vizualizar se relamente é preciso
-    List<ClienteModel> findByNomeCliente(String nomeCliente);
-
-    
     @Transactional
     void deleteByEmailCliente(String emailCliente);
 }
